@@ -369,11 +369,9 @@ def count_sines_vs_cosines(m):
     for k in range(m+1):
         if math.sin(k) > math.cos(k):
             count = count + 1
-            print(math.sin(k))
     for k in range(m+1):
         if math.sin(-k) > math.cos(-k):
             count = count + 1
-            print(math.sin(-k))
 
     return count
 

@@ -273,60 +273,60 @@ def run_test_count_sines_vs_cosines():
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
-    # print()
-    # print('--------------------------------------------------')
-    # print('Testing the   count_sines_vs_cosines   function:')
-    # print('--------------------------------------------------')
-    #
-    #
-    # expected = 100
-    # answer = count_sines_vs_cosines(101)
-    # print('Test 2 expected:', expected)
-    # print('       actual:  ', answer)
+    print()
+    print('--------------------------------------------------')
+    print('Testing the   count_sines_vs_cosines   function:')
+    print('--------------------------------------------------')
 
-    # print()
-    # print('--------------------------------------------------')
-    # print('Testing the   count_sines_vs_cosines   function:')
-    # print('--------------------------------------------------')
-    #
-    #
-    # expected = 6
-    # answer = count_sines_vs_cosines(5)
-    # print('Test 3 expected:', expected)
-    # print('       actual:  ', answer)
 
-    # print()
-    # print('--------------------------------------------------')
-    # print('Testing the   count_sines_vs_cosines   function:')
-    # print('--------------------------------------------------')
-    #
-    #
-    # expected = 4
-    # answer = count_sines_vs_cosines(3)
-    # print('Test 4 expected:', expected)
-    # print('       actual:  ', answer)
+    expected = 100
+    answer = count_sines_vs_cosines(101)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
 
-    # print()
-    # print('--------------------------------------------------')
-    # print('Testing the   count_sines_vs_cosines   function:')
-    # print('--------------------------------------------------')
-    #
-    #
-    # expected = 0
-    # answer = count_sines_vs_cosines(0)
-    # print('Test 5 expected:', expected)
-    # print('       actual:  ', answer)
+    print()
+    print('--------------------------------------------------')
+    print('Testing the   count_sines_vs_cosines   function:')
+    print('--------------------------------------------------')
 
-    # print()
-    # print('--------------------------------------------------')
-    # print('Testing the   count_sines_vs_cosines   function:')
-    # print('--------------------------------------------------')
-    #
-    #
-    # expected = 1
-    # answer = count_sines_vs_cosines(1)
-    # print('Test 6 expected:', expected)
-    # print('       actual:  ', answer)
+
+    expected = 6
+    answer = count_sines_vs_cosines(5)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+    print()
+    print('--------------------------------------------------')
+    print('Testing the   count_sines_vs_cosines   function:')
+    print('--------------------------------------------------')
+
+
+    expected = 4
+    answer = count_sines_vs_cosines(3)
+    print('Test 4 expected:', expected)
+    print('       actual:  ', answer)
+
+    print()
+    print('--------------------------------------------------')
+    print('Testing the   count_sines_vs_cosines   function:')
+    print('--------------------------------------------------')
+
+
+    expected = 0
+    answer = count_sines_vs_cosines(0)
+    print('Test 5 expected:', expected)
+    print('       actual:  ', answer)
+
+    print()
+    print('--------------------------------------------------')
+    print('Testing the   count_sines_vs_cosines   function:')
+    print('--------------------------------------------------')
+
+
+    expected = 1
+    answer = count_sines_vs_cosines(1)
+    print('Test 6 expected:', expected)
+    print('       actual:  ', answer)
     # ------------------------------------------------------------------
     # TO DO: 6 (continued).
     # Below this comment, add 5 more test cases of your own choosing.
@@ -358,13 +358,24 @@ def count_sines_vs_cosines(m):
       -- Also:  count_sines_vs_cosines(101) returns 100 (trust me!)
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT: As in previous problems in this session,
     #   you must NOT use the 2 or 3-parameter versions
     #   of the RANGE expression, if you happen to know them.
     # ------------------------------------------------------------------
+    count = 0
+    for k in range(m+1):
+        if math.sin(k) > math.cos(k):
+            count = count + 1
+            print(math.sin(k))
+    for k in range(m+1):
+        if math.sin(-k) > math.cos(-k):
+            count = count + 1
+            print(math.sin(-k))
+
+    return count
 
 
 # ----------------------------------------------------------------------

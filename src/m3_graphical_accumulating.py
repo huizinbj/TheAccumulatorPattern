@@ -193,10 +193,10 @@ def draw_lines(n, point, window):
     for k in range(n):
         change = change * -1
         startpoint = rg.Point(x, y)
-        endpoint = rg.Point(x + 100, (y + 100) * change)
+        endpointy = y + change * (200 * k)//(n+1)
+        endpoint = rg.Point(x + 100, endpointy)
 
         line = rg.Line(startpoint, endpoint)
-        y = y - 30
         line.attach_to(window)
 
     window.render()
